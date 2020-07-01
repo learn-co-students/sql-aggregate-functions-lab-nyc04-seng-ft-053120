@@ -1,5 +1,5 @@
 ## Code your solution below. Note that your SQL queries should be in quotation marks. 
-
+require "pry"
 def highest_student_gpa
     "SELECT students.gpa FROM students ORDER BY students.gpa DESC LIMIT 1"
 end
@@ -19,3 +19,7 @@ end
 def average_gpa_for_9th_grade
     "SELECT AVG (students.gpa) FROM students WHERE grade = 9 GROUP BY students.grade"
 end
+
+p (@db.execute(total_tardies_for_all_students))
+
+binding.pry
